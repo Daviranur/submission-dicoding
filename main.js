@@ -2,7 +2,6 @@
 console.log('Hello, world!');
 
 
-<<<<<<< HEAD
 
 // ini kode buat tombol hapus
 let buttonHapus = document.createElement('button');
@@ -26,7 +25,7 @@ function hapusBuku(id){
 };
 
 
-=======
+
 // update
 let buttonUpdate = document.createElement('button');
 buttonUpdate.textContent = data.isComplete ? `Belum Selesai` : `Selesai dibaca`;
@@ -41,5 +40,12 @@ buttonUpdate.addEventListener('click',function(){
 function bookStatus(id){
     let data = getNewBook();
     let book = data.findIndex(book => book.id === id);
->>>>>>> button-update
+
+    if(book !== -1){
+        data[book].isComplete = !data[data].isComplete;
+
+        localStorage.setItem(keyStorage,JSON.stringify(data));
+        renderListBook();
+    }
+}
 
