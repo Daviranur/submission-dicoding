@@ -19,6 +19,8 @@ function bookStatus(id){
 
     if(book !== -1){
         data[book].isComplete = !data[book].isComplete;
+
+        localStorage.setItem(keyStorage,JSON.stringify(data));
         renderListBook();
     }
 }
