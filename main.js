@@ -2,6 +2,7 @@
 console.log('Hello, world!');
 
 
+
 // ini kode buat tombol hapus
 let buttonHapus = document.createElement('button');
 buttonHapus.textContent = `Hapus Buku`;
@@ -22,5 +23,6 @@ function hapusBuku(id){
     localStorage.removeItem(hapus);
     renderListBook();
 };
+
 
 
