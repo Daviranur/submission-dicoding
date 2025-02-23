@@ -2,7 +2,7 @@
 console.log('Hello, world!');
 
 
-// ini kode buat tombol updatenya 
+// kode buat button update
 let buttonUpdate = document.createElement('button');
 buttonUpdate.textContent = data.isComplete ? `Belum Selesai` : `Selesai dibaca`;
 buttonUpdate.classList.add('buttons');
@@ -14,7 +14,7 @@ buttonUpdate.addEventListener('click',function(){
 
 
 
-// ini fungsinya 
+// fungsi buat ngejalaninnya 
 function bookStatus(id){
     let data = getNewBook();
     let book = data.findIndex(book => book.id === id);
